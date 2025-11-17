@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>نموذج داخل جدول - صفحة 3</title>
+</head>
+<body>
+
+<form>
+  <table style="width: 100%; border-collapse: collapse;">
+
+    <tr>
+      <td style="width: 25%;">الاسم:</td>
+      <td style="width: 75%;"><input type="text"></td>
+    </tr>
+
+    <tr>
+      <td>كلمة المرور:</td>
+      <td><input type="password"></td>
+    </tr>
+
+    <tr>
+      <td>الجنس:</td>
+      <td>
+        <label><input type="radio" name="gender" value="male"> ذكر</label>
+        &nbsp;&nbsp;
+        <label><input type="radio" name="gender" value="female"> أنثى</label>
+      </td>
+    </tr>
+
+    <!-- هوايات جديدة -->
+    <tr>
+      <td>الهوايات:</td>
+      <td>
+        <label><input type="checkbox" value="cooking"> الطبخ</label><br>
+        <label><input type="checkbox" value="photography"> التصوير</label><br>
+        <label><input type="checkbox" value="programming"> البرمجة</label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>الملاحظات:</td>
+      <td><textarea rows="4" cols="30"></textarea></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit">إرسال</button>
+        <button type="reset">حذف</button>
+      </td>
+    </tr>
+
+  </table>
+</form>
+
+</body>
+</html>
