@@ -1,73 +1,58 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>التعليم وأثره في المجتمع</title>
-<style>
-body {
-    background-color: #f4f4f4;
-    font-family: "Tahoma";
-    direction: rtl;
-    text-align: right;
-    margin: 40px;
-}
-
-/* تنسيق العنوان الرئيسي */
-#main-title {
-    text-align: center;
-    color: black;
-    background-color: #ffe4b5;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/* تنسيق العناوين الفرعية */
-.sub-title {
-    color: darkblue;
-    background-color: #dceeff;
-    padding: 8px;
-    border-right: 5px solid blue;
-    margin-top: 25px;
-}
-
-.s-title {
-    color:peru;
-    background-color: #dceeff;
-    padding: 8px;
-    border-right: 5px solid blue;
-    margin-top: 25px;
-}
-
-
-/* تنسيق الفقرات */
-p {
-    color: #333;
-    background-color: white;
-    border-radius: 8px;
-    padding: 10px;
-    line-height: 1.7;
-    box-shadow: 0px 0px 5px lightgray;
-}
-</style>
+<title>نموذج داخل جدول - صفحة 3</title>
 </head>
 <body>
 
-<h1 id="main-title">التعليم وأثره في المجتمع</h1>
+<form>
+  <table style="width: 100%; border-collapse: collapse;">
 
-<h2 class="s-title">مقدمة عن التعليم</h2>
-<p>يُعد التعليم أساس تقدم المجتمعات، فهو يبني العقول وينشر الوعي ويزيد من فرص النجاح في الحياة.</p>
+    <tr>
+      <td style="width: 25%;">الاسم:</td>
+      <td style="width: 75%;"><input type="text"></td>
+    </tr>
 
-<h2 class="sub-title">دور التعليم في تطوير الأفراد</h2>
-<p>يساعد التعليم على تنمية المهارات واكتساب المعرفة التي يحتاجها الفرد ليصبح عنصرًا فعّالًا في المجتمع.</p>
+    <tr>
+      <td>كلمة المرور:</td>
+      <td><input type="password"></td>
+    </tr>
 
-<h2 class="s-title">التعليم والاقتصاد</h2>
-<p>كلما ارتفع مستوى التعليم في دولة ما، زادت الإنتاجية وتطورت الصناعات والتقنيات الحديثة فيها.</p>
+    <tr>
+      <td>الجنس:</td>
+      <td>
+        <label><input type="radio" name="gender" value="male"> ذكر</label>
+        &nbsp;&nbsp;
+        <label><input type="radio" name="gender" value="female"> أنثى</label>
+      </td>
+    </tr>
 
-<h2 class="sub-title">التعليم والمساواة</h2>
-<p>يمنح التعليم الجميع فرصًا متكافئة لتحقيق أحلامهم بغض النظر عن الطبقة الاجتماعية أو الجنس.</p>
+    <!-- هوايات جديدة -->
+    <tr>
+      <td>الهوايات:</td>
+      <td>
+        <label><input type="checkbox" value="cooking"> الطبخ</label><br>
+        <label><input type="checkbox" value="photography"> التصوير</label><br>
+        <label><input type="checkbox" value="programming"> البرمجة</label>
+      </td>
+    </tr>
 
-<h2 class="s-title">التعليم في المستقبل</h2>
-<p>يتجه العالم نحو التعليم الإلكتروني واستخدام التكنولوجيا لتسهيل الوصول إلى المعرفة في أي وقت ومكان.</p>
+    <tr>
+      <td>الملاحظات:</td>
+      <td><textarea rows="4" cols="30"></textarea></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit">إرسال</button>
+        <button type="reset">حذف</button>
+      </td>
+    </tr>
+
+  </table>
+</form>
 
 </body>
 </html>
