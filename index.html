@@ -2,57 +2,128 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>نموذج داخل جدول - صفحة 3</title>
+<title>آلة حاسبة</title>
+
+<style>
+    body {
+        background: #f0f0f0;
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .calculator {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        width: 320px;
+    }
+
+    #result {
+        width: 100%;
+        height: 60px;
+        font-size: 26px;
+        text-align: right;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #bbb;
+        margin-bottom: 20px;
+        background: #f9f9f9;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .btn {
+        padding: 18px;
+        font-size: 20px;
+        border: none;
+        background: #e4e4e4;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: #d1d1d1;
+    }
+
+    .equal {
+        background: #4caf50;
+        color: white;
+    }
+
+    .equal:hover {
+        background: #449d48;
+    }
+
+    .clear {
+        background: #ff7979;
+        color: white;
+    }
+
+    .clear:hover {
+        background: #e06666;
+    }
+</style>
+
 </head>
 <body>
 
-<form>
-  <table style="width: 100%; border-collapse: collapse;">
+<div class="calculator">
 
-    <tr>
-      <td style="width: 25%;">الاسم:</td>
-      <td style="width: 75%;"><input type="text"></td>
-    </tr>
+    <input type="text" id="result" disabled>
 
-    <tr>
-      <td>كلمة المرور:</td>
-      <td><input type="password"></td>
-    </tr>
+    <div class="buttons">
+        <button class="btn" onclick="add('7')">7</button>
+        <button class="btn" onclick="add('8')">8</button>
+        <button class="btn" onclick="add('9')">9</button>
+        <button class="btn" onclick="add('/')">÷</button>
 
-    <tr>
-      <td>الجنس:</td>
-      <td>
-        <label><input type="radio" name="gender" value="male"> ذكر</label>
-        &nbsp;&nbsp;
-        <label><input type="radio" name="gender" value="female"> أنثى</label>
-      </td>
-    </tr>
+        <button class="btn" onclick="add('4')">4</button>
+        <button class="btn" onclick="add('5')">5</button>
+        <button class="btn" onclick="add('6')">6</button>
+        <button class="btn" onclick="add('*')">×</button>
 
-    <!-- هوايات جديدة -->
-    <tr>
-      <td>الهوايات:</td>
-      <td>
-        <label><input type="checkbox" value="cooking"> الطبخ</label><br>
-        <label><input type="checkbox" value="photography"> التصوير</label><br>
-        <label><input type="checkbox" value="programming"> البرمجة</label>
-      </td>
-    </tr>
+        <button class="btn" onclick="add('1')">1</button>
+        <button class="btn" onclick="add('2')">2</button>
+        <button class="btn" onclick="add('3')">3</button>
+        <button class="btn" onclick="add('-')">−</button>
 
-    <tr>
-      <td>الملاحظات:</td>
-      <td><textarea rows="4" cols="30"></textarea></td>
-    </tr>
+        <button class="btn" onclick="add('0')">0</button>
+        <button class="btn" onclick="add('.')">.</button>
+        <button class="btn equal" onclick="calculate()">=</button>
+        <button class="btn" onclick="add('+')">+</button>
 
-    <tr>
-      <td></td>
-      <td>
-        <button type="submit">إرسال</button>
-        <button type="reset">حذف</button>
-      </td>
-    </tr>
+        <button class="btn clear" style="grid-column: span 4;" onclick="clearResult()">مسح الكل</button>
+    </div>
 
-  </table>
-</form>
+</div>
+
+<script>
+    function add(value) {
+        document.getElementById("result").value += value;
+    }
+
+    function calculate() {
+        try {
+            let res = eval(document.getElementById("result").value);
+            document.getElementById("result").value = res;
+        } catch {
+            document.getElementById("result").value = "خطأ";
+        }
+    }
+
+    function clearResult() {
+        document.getElementById("result").value = "";
+    }
+</script>
 
 </body>
 </html>
